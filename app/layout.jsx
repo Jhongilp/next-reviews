@@ -1,4 +1,5 @@
-import Link from "next/link";
+import NavBar from "@/components/NavBar";
+import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
@@ -8,24 +9,11 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Next reviews app</title>
       </head>
-      <body>
+      <body className="flex flex-col px-4 py-2 min-h-screen">
         <header>
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/reviews">Reviews</Link>
-              </li>
-            </ul>
-          </nav>
+          <NavBar />
         </header>
-
-        {children}
+        <main className="grow py-3">{children}</main>
       </body>
     </html>
   );
