@@ -1,6 +1,11 @@
 import NavBar from "@/components/NavBar";
 import "./globals.css";
 
+export const metadata = {
+  title: "Next review app",
+  description: "A review app built with Next.js",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
